@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { routes, type RouteItem } from '../routes';
 import { Layout, Menu, theme, message } from 'antd';
 
-import { useNavigate, Outlet } from "react-router";
+import {  Outlet } from "react-router";
 
-const { Header, Sider, Content, Footer } = Layout;
+const {  Sider, Content, Footer } = Layout;
 
 
 
@@ -50,7 +50,6 @@ const DefaultLayout: React.FC = () => {
     }
   }, [msg,type, messageApi, clearMessage]);
   
-  const navigate = useNavigate();
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
 
   // Update selectedKeys based on current location
