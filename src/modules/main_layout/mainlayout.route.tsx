@@ -9,7 +9,7 @@ export const routesMainLayout: RouteItem[] = [
     label: 'About Me',
     key: 'about-me',
     icon: <HomeOutlined />,
-    image: '../../../public/assets/imgs/my picure.JPG',
+    image: '/assets/imgs/my picure.JPG',
     element: <MainPage />,
     isShowMenu: true,
     isPrivate: true,
