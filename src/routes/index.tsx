@@ -3,7 +3,7 @@ import { routesDashboard } from '../modules/dashboard/dashboard.route';
 import { routesAuth } from '../modules/auth/auth.route';
 import { routesProduct } from '../modules/product/product.route';
 import { routesAdministrator } from '../modules/administrator/administrator.route';
-import { routesAvatar } from '../modules/about_me/avatar.route';
+import { routesAvatar } from '../modules/about_me/aboutme.route';
 import { routesExperiences } from '../modules/experence/experence.route';
 
 export type RouteItem = {

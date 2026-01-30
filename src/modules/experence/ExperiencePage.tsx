@@ -13,12 +13,12 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    company: "Cohost AI",
-    companyLink: "#",
-    position: "Front-end Developer (Leader)",
-    date: "03/2024 – Now",
+    company: "LIKELION",
+    companyLink: "https://www.likelion.edu.vn/",
+    position: "Website Job-Search Full-Stack (Leader)",
+    date: "07/2025 – 09-2025",
     teamSize: "5",
-    description: 'Cohost AI is created by an Airbnb Host, who deeply understands the problems that Micro Entrepreneurs face daily. We want to leverage technology to help 1 million micro-entrepreneurs and micro-businesses thrive by 2030.',
+    description: 'A job search platform that connects candidates with employers, allowing users to explore job opportunities, apply online, and track application status. The system focuses on usability, performance, and efficient recruitment processes.',
     responsibilities: [
       "Clarify requirements with superiors, analyze and divide tasks for the team.",
       "Build and develop projects with ReactJS, NextJS, TypeScript Tailwind, Shadcn/ui, SASS, Material UI.",
@@ -51,7 +51,7 @@ export default function ExperiencePage() {
       <div className="border-t-2 border-gray-300 my-8"></div>
 
       {/* Title */}
-      <h2 className="text-3xl font-bold mb-8">Experience</h2>
+      <h1 className="text-5xl font-bold mb-8">Experience</h1>
 
       {/* Experience Items */}
       <div className="space-y-8">

@@ -1,6 +1,6 @@
 import { HomeOutlined } from "@ant-design/icons";
 import type { RouteItem } from "../../routes";
-import AvatarPage from "./AvatarPage";
+import AvatarPage from "./About_me";
 
 
 export const routesAvatar: RouteItem[] = [

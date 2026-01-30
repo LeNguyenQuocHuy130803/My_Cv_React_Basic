@@ -142,15 +142,16 @@ const DefaultLayout: React.FC = () => {
           style={{
             margin: '16px',
             padding: 16,
-            minHeight: 280,
+            minHeight: 'calc(100vh - 150px)',
             background: colorBgContainer,
-            overflow: 'initial'
+            overflowY: 'auto',
+            overflowX: 'hidden'
           }}
         >
           
           <Outlet />
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center' }}>Ant Design ©2026 Created by LNQH</Footer>
       </Layout>
     </Layout>
     </>

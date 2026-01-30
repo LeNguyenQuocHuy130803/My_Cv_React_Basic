@@ -108,8 +108,8 @@ export default function AvatarPage() {
                 </section>
             </section>
 
-            {/* Experience Section */}
-            <section id="experience" className="py-16 mt-16 border-t-2 border-gray-300 pt-16">
+            {/* Experience Section + thiết lập id để chuyển đến mục */}
+            <section id="experience" className="py-16 mt-12 mb-12 border-t-4 border-red-300 pt-12" style={{marginTop: "100px"}}>
                 <ExperiencePage />
             </section>
 
