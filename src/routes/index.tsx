@@ -1,14 +1,11 @@
 import type { ReactNode } from 'react';
 import { routesDashboard } from '../modules/dashboard/dashboard.route';
 import { routesAuth } from '../modules/auth/auth.route';
-import { routesProduct } from '../modules/product/product.route';
-import { routesAdministrator } from '../modules/administrator/administrator.route';
-import { routesAvatar } from '../modules/about_me/avatar.route';
-import { routesExperiences } from '../modules/experence/experence.route';
+import {  routesMainLayout } from '../modules/main_layout/mainlayout.route';
 
 export type RouteItem = {
   path?: string;
-  label: string;
+  label: string | React.ReactNode;
   key: string;
   icon?: ReactNode;
   image?: string;
@@ -19,11 +16,7 @@ export type RouteItem = {
 };
 
 export const routes: RouteItem[] = [
-  ...routesAvatar,
-  ...routesExperiences,
+  ...routesMainLayout,
   ...routesDashboard, //đăng ký route dashboard
   ...routesAuth,
-  ...routesProduct,
-  ...routesAdministrator,
-  
 ];
