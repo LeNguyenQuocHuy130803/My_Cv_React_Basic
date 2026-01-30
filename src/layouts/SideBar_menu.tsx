@@ -105,8 +105,8 @@ const DefaultLayout: React.FC = () => {
               src={avatarRoute.image}
               alt="avatar"
               style={{
-                width: '180px',
-                height: '180px',
+                width: '200px',
+                height: '200px',
                 borderRadius: '50%',
                 objectFit: 'cover',
                 border: '3px solid #fff',
@@ -121,6 +121,18 @@ const DefaultLayout: React.FC = () => {
           items={items}
           selectedKeys={selectedKeys}
           onClick={({ key }) => {
+            // Handle download PDF - don't highlight this item
+            if (key === 'download-pdf') {
+              // Tải file PDF từ public folder
+              const link = document.createElement('a');
+              link.href = '/CV_LeNguyenQuocHuy.pdf';
+              link.download = 'CV_LeNguyenQuocHuy.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+              return;
+            }
+            // Only update selected keys for other menu items
             setSelectedKeys([key]);
             // Scroll to section using anchor
             const sectionId = key.split('-').join('-');

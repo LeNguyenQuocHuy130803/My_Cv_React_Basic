@@ -57,7 +57,7 @@ export const routesMainLayout: RouteItem[] = [
     isPrivate: true,
   },
   {
-    label: 'Download PDF',
+    label: <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#FFA500' }}>Download PDF</span>,
     key: 'download-pdf',
     icon: <DownloadOutlined />,
     isShowMenu: true,

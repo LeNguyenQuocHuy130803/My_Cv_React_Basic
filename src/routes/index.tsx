@@ -5,7 +5,7 @@ import {  routesMainLayout } from '../modules/main_layout/mainlayout.route';
 
 export type RouteItem = {
   path?: string;
-  label: string;
+  label: string | React.ReactNode;
   key: string;
   icon?: ReactNode;
   image?: string;
