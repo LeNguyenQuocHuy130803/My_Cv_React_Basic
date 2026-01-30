@@ -122,22 +122,17 @@ const DefaultLayout: React.FC = () => {
           selectedKeys={selectedKeys}
           onClick={({ key }) => {
             setSelectedKeys([key]);
-            navigate('/' + key.split('-').join('/'));
-            console.log(key);
+            // Scroll to section using anchor
+            const sectionId = key.split('-').join('-');
+            const element = document.getElementById(sectionId);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
           }}
         />
       </Sider>
       <Layout style={{ marginLeft: '300px' }}>
-        <Header style={{ 
-          padding: 0, 
-          background: colorBgContainer,
-          position: 'sticky',
-          top: 0,
-          zIndex: 1
-        }}
-        className='drop-shadow-sm'
-        >
-        </Header>
+
         <Content
           style={{
             margin: '16px',

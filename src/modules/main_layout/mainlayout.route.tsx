@@ -1,16 +1,66 @@
-import { HomeOutlined } from "@ant-design/icons";
+import { HomeOutlined, FileTextOutlined, ProjectOutlined, BgColorsOutlined, BookOutlined, HeartOutlined, LogoutOutlined, DownloadOutlined } from "@ant-design/icons";
 import type { RouteItem } from "../../routes";
-import MainLayoutPage from "./MainLayoutPage";
+import MainPage from "./MainPage";
 
 
 export const routesMainLayout: RouteItem[] = [
   {
-    path: '/main_layout',
+    path: '',
     label: 'About Me',
-    key: 'main_layout',
+    key: 'about-me',
+    icon: <HomeOutlined />,
     image: '../../../public/assets/imgs/my picure.JPG',
-    element: <MainLayoutPage />,
-    isShowMenu: true, // Hiển thị menu cho route này
-    isPrivate: true, // Chỉ cho phép người dùng đã đăng nhập truy cập
+    element: <MainPage />,
+    isShowMenu: true,
+    isPrivate: true,
+  },
+  {
+    label: 'Experience',
+    key: 'experience',
+    icon: <FileTextOutlined />,
+    isShowMenu: true,
+    isPrivate: true,
+  },
+  {
+    label: 'Projects',
+    key: 'projects',
+    icon: <ProjectOutlined />,
+    isShowMenu: true,
+    isPrivate: true,
+  },
+  {
+    label: 'Skills',
+    key: 'skills',
+    icon: <BgColorsOutlined />,
+    isShowMenu: true,
+    isPrivate: true,
+  },
+  {
+    label: 'Education',
+    key: 'education',
+    icon: <BookOutlined />,
+    isShowMenu: true,
+    isPrivate: true,
+  },
+  {
+    label: 'Interests',
+    key: 'interests',
+    icon: <HeartOutlined />,
+    isShowMenu: true,
+    isPrivate: true,
+  },
+  {
+    label: 'The End',
+    key: 'the-end',
+    icon: <LogoutOutlined />,
+    isShowMenu: true,
+    isPrivate: true,
+  },
+  {
+    label: 'Download PDF',
+    key: 'download-pdf',
+    icon: <DownloadOutlined />,
+    isShowMenu: true,
+    isPrivate: true,
   },
 ]
