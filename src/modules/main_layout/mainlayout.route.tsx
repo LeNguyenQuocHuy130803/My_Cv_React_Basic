@@ -1,16 +1,15 @@
 import { HomeOutlined } from "@ant-design/icons";
 import type { RouteItem } from "../../routes";
-import AvatarPage from "./About_me";
+import MainLayoutPage from "./MainLayoutPage";
 
 
-export const routesAvatar: RouteItem[] = [
+export const routesMainLayout: RouteItem[] = [
   {
-    path: '/avatar',
+    path: '/main_layout',
     label: 'About Me',
-    key: 'avatar',
-    icon: <HomeOutlined />,
+    key: 'main_layout',
     image: '../../../public/assets/imgs/my picure.JPG',
-    element: <AvatarPage />,
+    element: <MainLayoutPage />,
     isShowMenu: true, // Hiển thị menu cho route này
     isPrivate: true, // Chỉ cho phép người dùng đã đăng nhập truy cập
   },

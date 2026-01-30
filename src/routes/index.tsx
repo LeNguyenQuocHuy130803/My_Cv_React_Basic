@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react';
 import { routesDashboard } from '../modules/dashboard/dashboard.route';
 import { routesAuth } from '../modules/auth/auth.route';
-import { routesProduct } from '../modules/product/product.route';
-import { routesAdministrator } from '../modules/administrator/administrator.route';
-import { routesAvatar } from '../modules/about_me/aboutme.route';
+import {  routesMainLayout } from '../modules/main_layout/mainlayout.route';
 import { routesExperiences } from '../modules/experence/experence.route';
-
+import { routesSkills } from '../modules/skills/skills.route';
+import { routesEducation } from '../modules/education/education.route';
+import { routesTheEnd } from '../modules/The_End/thenend.route';
 export type RouteItem = {
   path?: string;
   label: string;
@@ -19,11 +19,11 @@ export type RouteItem = {
 };
 
 export const routes: RouteItem[] = [
-  ...routesAvatar,
+  ...routesMainLayout,
   ...routesExperiences,
+  ...routesSkills,
+  ...routesEducation,
+  ...routesTheEnd,
   ...routesDashboard, //đăng ký route dashboard
   ...routesAuth,
-  ...routesProduct,
-  ...routesAdministrator,
-  
 ];
