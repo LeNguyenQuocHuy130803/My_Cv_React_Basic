@@ -105,8 +105,8 @@ const DefaultLayout: React.FC = () => {
               src={avatarRoute.image}
               alt="avatar"
               style={{
-                width: '180px',
-                height: '180px',
+                width: '200px',
+                height: '200px',
                 borderRadius: '50%',
                 objectFit: 'cover',
                 border: '3px solid #fff',
@@ -121,36 +121,44 @@ const DefaultLayout: React.FC = () => {
           items={items}
           selectedKeys={selectedKeys}
           onClick={({ key }) => {
+            // Handle download PDF - don't highlight this item
+            if (key === 'download-pdf') {
+              // Tải file PDF từ public folder
+              const link = document.createElement('a');
+              link.href = '/CV_LeNguyenQuocHuy.pdf';
+              link.download = 'CV_LeNguyenQuocHuy.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+              return;
+            }
+            // Only update selected keys for other menu items
             setSelectedKeys([key]);
-            navigate('/' + key.split('-').join('/'));
-            console.log(key);
+            // Scroll to section using anchor
+            const sectionId = key.split('-').join('-');
+            const element = document.getElementById(sectionId);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
           }}
         />
       </Sider>
       <Layout style={{ marginLeft: '300px' }}>
-        <Header style={{ 
-          padding: 0, 
-          background: colorBgContainer,
-          position: 'sticky',
-          top: 0,
-          zIndex: 1
-        }}
-        className='drop-shadow-sm'
-        >
-        </Header>
+
         <Content
           style={{
             margin: '16px',
             padding: 16,
-            minHeight: 280,
+            minHeight: 'calc(100vh - 150px)',
             background: colorBgContainer,
-            overflow: 'initial'
+            overflowY: 'auto',
+            overflowX: 'hidden'
           }}
         >
           
           <Outlet />
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center' }}>Ant Design ©2026 Created by LNQH</Footer>
       </Layout>
     </Layout>
     </>

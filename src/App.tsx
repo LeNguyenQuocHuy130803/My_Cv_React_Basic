@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router';
-import DashboardLayout from './layouts/DashboardLayout';
+import DashboardLayout from './layouts/SideBar_menu';
 import EmptyLayout from './layouts/EmptyLayout';
 import { routes, type RouteItem } from './routes';
 import NotFoundPage from './modules/notfound/NotFoundPage';
