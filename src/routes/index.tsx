@@ -1,6 +1,4 @@
 import type { ReactNode } from 'react';
-import { routesDashboard } from '../modules/dashboard/dashboard.route';
-import { routesAuth } from '../modules/auth/auth.route';
 import {  routesMainLayout } from '../modules/main_layout/mainlayout.route';
 
 export type RouteItem = {
@@ -17,6 +15,4 @@ export type RouteItem = {
 
 export const routes: RouteItem[] = [
   ...routesMainLayout,
-  ...routesDashboard, //đăng ký route dashboard
-  ...routesAuth,
 ];

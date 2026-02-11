@@ -51,7 +51,6 @@ export default function SkillPage({}: Props) {
     { name: 'Docker', icon: <FaDocker className="text-blue-500" /> },
     { name: 'Postman', icon: <SiPostman className="text-orange-600" /> },
     { name: 'GitHub', icon: <RiGithubFill className="text-black" /> },
-    { name: 'IntelliJ', icon: <SiIntellijidea className="text-red-500" /> },
   ]
 
   const workflows = [

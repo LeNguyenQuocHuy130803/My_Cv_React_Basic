@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router';
 import DashboardLayout from './layouts/SideBar_menu';
 import EmptyLayout from './layouts/EmptyLayout';
 import { routes, type RouteItem } from './routes';
@@ -46,6 +46,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <Routes>
+        {/*  */}
         {renderRoutes(routes)}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

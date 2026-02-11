@@ -5,9 +5,9 @@ import MainPage from "./MainPage";
 
 export const routesMainLayout: RouteItem[] = [
   {
-    path: '',
+    path: '/',
     label: 'About Me',
-    key: 'about-me',
+    key: 'about-me',  // setSelectedKeys ở đây
     icon: <HomeOutlined />,
     image: '/assets/imgs/my picure.JPG',
     element: <MainPage />,
@@ -59,7 +59,7 @@ export const routesMainLayout: RouteItem[] = [
   {
     label: <span style={{ fontSize: '24px', fontWeight: 'bold', color: '#FFA500' }}>Download PDF</span>,
     key: 'download-pdf',
-    icon: <DownloadOutlined />,
+    // icon: <DownloadOutlined />,
     isShowMenu: true,
     isPrivate: true,
   },

@@ -47,8 +47,6 @@ const experiences: ExperienceItem[] = [
 export default function ExperiencePage() {
   return (
     <div className="mt-12">
-      {/* Separator Line */}
-      <div className="border-t-2 border-gray-300 my-8"></div>
 
       {/* Title */}
       <h1 className="text-5xl font-bold mb-8">Experience</h1>
