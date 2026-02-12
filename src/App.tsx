@@ -4,6 +4,7 @@ import DashboardLayout from './layouts/SideBar_menu';
 import EmptyLayout from './layouts/EmptyLayout';
 import { routes, type RouteItem } from './routes';
 import NotFoundPage from './modules/notfound/NotFoundPage';
+import { ROUTE_PATHS } from './constants/routes';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import {
   QueryClient,
@@ -46,7 +47,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
     <BrowserRouter>
       <Routes>
-        {/*  */}
+        {/* khi chạy lên lần đầu tiên  Redirect root to about-me page */}
+        <Route path={ROUTE_PATHS.ROOT} element={<Navigate to={ROUTE_PATHS.ABOUT_ME} replace />} />
         {renderRoutes(routes)}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
