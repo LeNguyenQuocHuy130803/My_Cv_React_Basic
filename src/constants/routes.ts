@@ -1,7 +1,3 @@
-/**
- * Route paths constants - centralized route definitions
- * Prevents magic strings and makes refactoring easier
- */
 
 export const ROUTE_PATHS = {
   ROOT: '/',

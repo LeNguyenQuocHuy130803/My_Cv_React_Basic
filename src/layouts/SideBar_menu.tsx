@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { routes, type RouteItem } from '../routes';
 import { Layout, Menu, theme, message } from 'antd';
 import { Outlet, useNavigate, useLocation } from "react-router";
-import { ROUTE_PATHS, PDF_CONFIG, SECTION_IDS } from '../constants/routes';
+import {  PDF_CONFIG, SECTION_IDS } from '../constants/routes';
 import type { MenuProps } from 'antd';
 import { useAppMessage } from '../stores/useAppMessage';
 

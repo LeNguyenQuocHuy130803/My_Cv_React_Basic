@@ -18,7 +18,6 @@ import {
   SiMongodb, 
   SiFirebase, 
   SiPostman, 
-  SiIntellijidea,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
