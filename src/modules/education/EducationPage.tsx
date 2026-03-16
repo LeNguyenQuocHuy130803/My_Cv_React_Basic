@@ -25,37 +25,37 @@ const educations: EducationItem[] = [
 
 export default function EducationPage() {
   return (
-    <div className='mt-12'>
+    <div className='mt-6 md:mt-12'>
       {/* Separator Line */}
       <div className='border-t-2 border-gray-300 my-8'></div>
 
       {/* Title */}
-      <h1 className='text-5xl font-bold mb-8'>Education</h1>
+      <h1 className='text-3xl md:text-5xl font-bold mb-4 md:mb-8'>Education</h1>
 
       {/* Education Items */}
       <div className='space-y-8'>
         {educations.map((eduss, index) => (
           <div key={index} className='mb-8'>
             {/* School Header */}
-            <div className='flex justify-between items-start mb-2'>
-              <div>
-                <h3 className='text-2xl font-bold text-teal-600 flex items-center gap-2'>
+            <div className='flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-2'>
+              <div className='flex-1'>
+                <h3 className='text-lg md:text-2xl font-bold text-teal-600 flex items-center gap-2'>
                   {eduss.school}
-                  {eduss.schoolLink && <LinkOutlined className='text-lg' />}
+                  {eduss.schoolLink && <LinkOutlined className='text-base md:text-lg' />}
                 </h3>
               </div>
-              <p className='text-right text-lg font-semibold text-teal-600'>{eduss.period}</p>
+              <p className='text-right text-base md:text-lg font-semibold text-teal-600'>{eduss.period}</p>
             </div>
 
             {/* Description */}
-            <p className='text-gray-700 mb-4'>
+            <p className='text-gray-700 mb-4 text-sm md:text-base'>
               <span className='font-semibold text-black'>• {eduss.description}</span>
             </p>
 
             {/* Highlights */}
             <ul className='space-y-2'>
               {eduss.highlights.map((highlight, idx) => (
-                <li key={idx} className='flex gap-3 text-gray-700'>
+                <li key={idx} className='flex gap-3 text-gray-700 text-sm md:text-base'>
                   <span className='text-orange-400 text-lg flex-shrink-0'>■</span>
                   <div>
                     {highlight.split('\n').map((line, i) => (

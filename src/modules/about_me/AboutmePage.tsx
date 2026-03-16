@@ -13,11 +13,11 @@ export default function AboutmePage({ }: Props) {
     return (
         <div>
             <div className="space-y-3">
-                <h1 className="text-5xl font-bold">
+                <h1 className="text-3xl md:text-5xl font-bold">
                     Le Nguyen <span className="text-blue-500">Quoc Huy</span>
                 </h1>
 
-                <div className="space-y-1 text-xl text-slate-700" style={{ marginTop: "20px" }}>
+                <div className="space-y-1 text-base md:text-xl text-slate-700" style={{ marginTop: "20px" }}>
                     <div className="flex items-center gap-2">
                         <PhoneOutlined /> <span>076 - 523 - 3951</span>
                     </div>
@@ -28,7 +28,7 @@ export default function AboutmePage({ }: Props) {
             </div>
 
 
-            <section className="bg-green-50 border border-green-200 rounded-lg  text-lg leading-relaxed" style={{ marginTop: '24px', padding: '12px', borderRadius: '10px' }}>
+            <section className="bg-green-50 border border-green-200 rounded-lg text-base md:text-lg leading-relaxed" style={{ marginTop: '24px', padding: '12px', borderRadius: '10px' }}>
                 <p>
                     Hi there, welcome to look at my profile!
                     <br />
@@ -41,7 +41,7 @@ export default function AboutmePage({ }: Props) {
             </section>
 
             {/* Skills */}
-            <section className="space-y-2 text-lg" style={{ margin: "20px" }}>
+            <section className="space-y-2 text-base md:text-lg" style={{ margin: "20px 0" }}>
                 <p>
                     <span className="font-bold">Front-End:</span>  I have experience working with <span className="font-semibold">HTML, CSS, JavaScript,
                         TypeScript, React, NextJS, Redux, Ant Design, Tailwind CSS, Bootstrap</span>
@@ -54,12 +54,12 @@ export default function AboutmePage({ }: Props) {
 
             {/* Contact */}
             <section className="space-y-4">
-                <div className="space-y-2 text-lg">
+                <div className="space-y-2 text-base md:text-lg">
                     <div className="flex items-center gap-2">
                         <MailOutlined style={{ color: 'red' }} />
                         <a
                             href="mailto:huyle130803@gmail.com"
-                            className="text-teal-600 hover:underline"
+                            className="text-teal-600 hover:underline break-all"
                         >
                             huyle130803@gmail.com
                         </a>
@@ -71,14 +71,14 @@ export default function AboutmePage({ }: Props) {
                             href="https://github.com/leNguyenQuocHuy130803"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-teal-600 hover:underline"
+                            className="text-teal-600 hover:underline break-all"
                         >
                             github.com/leNguyenQuocHuy130803
                         </a>
                     </div>
                 </div>
 
-                <div className="flex gap-4 text-2xl">
+                <div className="flex gap-4 text-xl md:text-2xl">
                     <a
                         href="https://github.com/leNguyenQuocHuy130803"
                         target="_blank"
@@ -99,7 +99,7 @@ export default function AboutmePage({ }: Props) {
                 </div>
 
 
-                <p className="italic text-lg text-slate-600">
+                <p className="italic text-base md:text-lg text-slate-600">
                     "Looking up at a starry night sky. How little are we in this universe?"
                 </p>
             </section>

@@ -5,13 +5,13 @@ export default function
 ({}: Props) {
   return (
       <div className='mb-12'>
-        <p className='text-gray-700 text-lg mb-6'>
+        <p className='text-gray-700 text-base md:text-lg mb-6'>
           <span className='font-bold text-black'>Besides my work as a programmer</span>, I spend most of my free time watching movies and listening to music, and playing sports.
         </p>
-        <p className='text-gray-600 italic text-lg mb-8'>
+        <p className='text-gray-600 italic text-base md:text-lg mb-8'>
             In addition, I enjoy drinking coffee and watching movies for entertainment!!.
         </p>
-        <p className='text-gray-600 italic text-lg mb-9'>
+        <p className='text-gray-600 italic text-base md:text-lg mb-6 md:mb-9'>
           <span className='font-bold text-black'>I love sports , especially football</span> . Let's take a look at a picture of my favorite team:
         </p>
 
@@ -25,7 +25,7 @@ export default function
         </div>
 
         {/* Closing Message */}
-        <p className='text-gray-700 text-lg'>
+        <p className='text-gray-700 text-base md:text-lg'>
           I would be <span className='font-bold text-black'>very happy</span> if I could become a member and contribute my strength to your company. Thank you for considering my application!
         </p>
       </div>

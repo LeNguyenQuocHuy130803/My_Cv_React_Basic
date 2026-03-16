@@ -46,43 +46,43 @@ const experiences: ExperienceItem[] = [
 
 export default function ExperiencePage() {
   return (
-    <div className="mt-12">
+    <div className="mt-6 md:mt-12">
 
       {/* Title */}
-      <h1 className="text-5xl font-bold mb-8">Experience</h1>
+      <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-8">Experience</h1>
 
       {/* Experience Items */}
       <div className="space-y-8">
         {experiences.map((exp, index) => (
           <div key={index} className="mb-8">
             {/* Company Header */}
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h3 className="text-2xl font-bold text-teal-600 flex items-center gap-2">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-2">
+              <div className="flex-1">
+                <h3 className="text-lg md:text-2xl font-bold text-teal-600 flex items-center gap-2">
                   {exp.company}
-                  {exp.companyLink && <LinkOutlined className="text-lg" />}
+                  {exp.companyLink && <LinkOutlined className="text-base md:text-lg" />}
                 </h3>
-                <p className="text-lg text-gray-700">{exp.position}</p>
+                <p className="text-base md:text-lg text-gray-700">{exp.position}</p>
               </div>
-              <p className="text-right text-lg font-semibold text-teal-600">{exp.date}</p>
+              <p className="text-right text-base md:text-lg font-semibold text-teal-600">{exp.date}</p>
             </div>
 
             {/* Team Size */}
             {exp.teamSize && (
-              <p className="text-orange-500 font-bold mb-2">
+              <p className="text-orange-500 font-bold mb-2 text-sm md:text-base">
                 ■ {exp.company} (Team size: {exp.teamSize})
               </p>
             )}
 
             {/* Description */}
-            <p className="text-gray-700 mb-4">
+            <p className="text-gray-700 mb-4 text-sm md:text-base">
               <span className="font-semibold text-black">• {exp.description}</span>
             </p>
 
             {/* Responsibilities */}
             <ul className="space-y-2">
               {exp.responsibilities.map((resp, idx) => (
-                <li key={idx} className="flex gap-3 text-gray-700">
+                <li key={idx} className="flex gap-3 text-gray-700 text-sm md:text-base">
                   <span className="text-orange-400 text-lg flex-shrink-0">■</span>
                   <span>{resp}</span>
                 </li>

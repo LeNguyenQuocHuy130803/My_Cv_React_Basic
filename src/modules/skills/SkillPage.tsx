@@ -64,18 +64,18 @@ export default function SkillPage({}: Props) {
   ]
 
   return (
-    <div className='p-8 max-w-6xl mx-auto font-sans'>
+    <div className='px-2 md:p-8 max-w-6xl mx-auto font-sans'>
       {/* Title */}
-      <h1 className='text-4xl font-bold mb-12 text-gray-800 uppercase tracking-tight'>skills</h1>
+      <h1 className='text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-800 uppercase tracking-tight'>skills</h1>
 
       {/* Programming Languages & Tools Section */}
-      <div className='mb-16'>
-        <h2 className='text-xl font-bold text-gray-700 mb-8 border-b-2 border-gray-100 pb-2'>Programming Languages & Tools:</h2>
-        <div className='flex flex-wrap gap-5'>
+      <div className='mb-12 md:mb-16'>
+        <h2 className='text-lg md:text-xl font-bold text-gray-700 mb-6 md:mb-8 border-b-2 border-gray-100 pb-2'>Programming Languages & Tools:</h2>
+        <div className='flex flex-wrap gap-3 md:gap-5'>
           {skills.map((skill) => (
             <div 
               key={skill.name} 
-              className='w-16 h-16 flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-3xl' 
+              className='w-14 h-14 md:w-16 md:h-16 flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-2xl md:text-3xl' 
               title={skill.name}
             >
               {skill.icon}
@@ -86,17 +86,17 @@ export default function SkillPage({}: Props) {
 
       {/* Workflow Section */}
       <div className='mb-12'>
-        <h2 className='text-xl font-bold text-gray-700 mb-8 border-b-2 border-gray-100 pb-2'>Workflow:</h2>
+        <h2 className='text-lg md:text-xl font-bold text-gray-700 mb-6 md:mb-8 border-b-2 border-gray-100 pb-2'>Workflow:</h2>
         <div className='space-y-6'>
           {workflows.map((workflow, index) => (
             <div key={index} className='flex gap-4 group'>
               <div className='flex-shrink-0 mt-1'>
-                <CheckCircleOutlined className='text-green-500 text-xl group-hover:scale-110 transition-transform' />
+                <CheckCircleOutlined className='text-green-500 text-lg md:text-xl group-hover:scale-110 transition-transform' />
               </div>
               <div className='flex-grow'>
-                <h3 className='text-lg font-bold text-gray-800 mb-2'>{workflow.title}</h3>
+                <h3 className='text-base md:text-lg font-bold text-gray-800 mb-2'>{workflow.title}</h3>
                 {workflow.description && (
-                  <div className='text-gray-600 text-sm leading-relaxed whitespace-pre-line bg-gray-50 p-4 rounded-lg border-l-4 border-green-500'>
+                  <div className='text-gray-600 text-xs md:text-sm leading-relaxed whitespace-pre-line bg-gray-50 p-3 md:p-4 rounded-lg border-l-4 border-green-500'>
                     {workflow.description}
                   </div>
                 )}

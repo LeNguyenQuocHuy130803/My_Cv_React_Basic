@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Sidebar logo styling */
+.sidebar_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar_logo {
+    height: 56px;
+    font-size: 16px;
+  }
+}
+
+/* Smooth transitions */
+.ant-layout {
+  transition: all 0.2s ease;
+}
+
+/* Better drawer styling */
+.ant-drawer-header {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Responsive text utilities */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Fix for mobile hamburger menu */
+.ant-btn-primary {
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
+}
